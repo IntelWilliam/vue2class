@@ -1,19 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <CabezeraHome :msg="mensaje"/>
+    <ListaHome/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CabezeraHome from './components/CabezeraHome.vue';
+import ListaHome from './components/ListaHome.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CabezeraHome,
+    ListaHome,
+  },
+  
+  data() {
+    return {
+      mensaje: 'Aplicacion de Vue titulo'
+    }
   }
 }
+
 </script>
 
 <style>

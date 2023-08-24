@@ -5,11 +5,22 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    ides: [
+      {nombre: 'vs code', voto: 0},
+      {nombre: 'netbeans', voto: 0},
+      {nombre: 'sublime', voto: 0},
+    ]
+   
   },
   getters: {
   },
+
   mutations: {
+    suma(state, index) {
+      state.ides[index].voto++;
+    }
   },
+
   actions: {
   },
   modules: {
